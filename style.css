@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    font-family: monospace;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #f519be;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+#roundCounter {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 18px;
+}
+
+.game-container {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+#roomImage {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+#mapContainer {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+#schoolMap {
+    width: 100%;
+    max-width: 1000px;
+    border: none;
+    background: white;
+    display: block;
+}
+
+#marker {
+    width: 16px;
+    height: 16px;
+    background: #ff4757;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: absolute;
+    display: none;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 10px rgba(255, 71, 87, 0.5);
+    pointer-events: none;
+    z-index: 12;
+}
+
+#coordinates {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #00ff00;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 20;
+}
+
+#lineOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+#flag {
+    position: absolute;
+    display: none;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    z-index: 11;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#submitGuess {
+    background: #667eea;
+    color: white;
+}
+
+#nextRoundBtn {
+    display: none;
+    background: #2ed573;
+    color: white;
+}
+
+#restartBtn {
+    display: none;
+    background: #ff4757;
+    color: white;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1.7;
+}
