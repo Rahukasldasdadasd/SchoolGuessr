@@ -14,53 +14,58 @@
 
     <div class="game-container">
 
-        <h2 id="roundTitle">Where is this classroom?</h2>
+        <div class="game-header">
+            <h2 id="roundTitle">Where is this classroom?</h2>
+            <p id="roundCounter">Round 1 / 5</p>
+        </div>
 
-        <p id="roundCounter">Round 1 / 5</p>
+        <div class="game-layout">
 
-        <img id="roomImage"
-             src="testimgclassroom.jpg"
-             alt="Mystery Classroom" />
+            <!-- LEFT: Room image + result -->
+            <div class="game-left">
 
-        <div id="mapContainer">
+                <img id="roomImage"
+                     src="testimgclassroom.jpg"
+                     alt="Mystery Classroom" />
 
-            <img id="schoolMap"
-                 src="testmapimg.jpg"
-                 alt="School Map" />
+                <div class="controls">
+                    <button id="submitGuess">Submit Guess</button>
+                    <button id="nextRoundBtn">Next Round</button>
+                    <button id="restartBtn">Restart Game</button>
+                </div>
 
-            <div id="marker"></div>
+                <p id="result"></p>
 
-            <div id="coordinates">
-                X: -- Y: --
             </div>
 
-            <!-- SVG overlay for drawing lines -->
-            <svg id="lineOverlay"
-                 style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:10;">
-            </svg>
+            <!-- RIGHT: Map -->
+            <div class="game-right">
 
-            <!-- Flag icon -->
-            <div id="flag">
-                <img src="flagpng.png"
-                     style="width:100%; height:100%; object-fit:contain;"
-                     alt="Flag"/>
+                <div id="mapContainer">
+
+                    <img id="schoolMap"
+                         src="testmapimg.jpg"
+                         alt="School Map" />
+
+                    <div id="marker"></div>
+
+                    <div id="coordinates">X: -- Y: --</div>
+
+                    <svg id="lineOverlay"
+                         style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:10;">
+                    </svg>
+
+                    <div id="flag">
+                        <img src="flagpng.png"
+                             style="width:100%; height:100%; object-fit:contain;"
+                             alt="Flag"/>
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
-
-        <button id="submitGuess">
-            Submit Guess
-        </button>
-
-        <button id="nextRoundBtn">
-            Next Round
-        </button>
-
-        <button id="restartBtn">
-            Restart Game
-        </button>
-
-        <p id="result"></p>
 
     </div>
 
