@@ -29,40 +29,89 @@ h2 {
 }
 
 #roundCounter {
-    margin-bottom: 20px;
     color: #555;
     font-size: 18px;
 }
+
+/* ========================
+   GAME CONTAINER
+======================== */
 
 .game-container {
     background: white;
     border-radius: 20px;
     padding: 30px;
-    max-width: 900px;
+    max-width: 1400px;
     margin: 0 auto;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
+.game-header {
+    margin-bottom: 20px;
+}
+
+/* ========================
+   SIDE-BY-SIDE LAYOUT
+======================== */
+
+.game-layout {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* LEFT COLUMN */
+
+.game-left {
+    flex: 0 0 auto;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 #roomImage {
     width: 100%;
-    max-width: 600px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    margin-bottom: 30px;
+    display: block;
 }
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#result {
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+/* RIGHT COLUMN */
+
+.game-right {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+/* ========================
+   MAP
+======================== */
 
 #mapContainer {
     position: relative;
-    display: inline-block;
-    margin: 20px 0;
+    display: block;
+    width: 100%;
 }
 
 #schoolMap {
     width: 100%;
-    max-width: 1000px;
     border: none;
     background: white;
     display: block;
+    border-radius: 8px;
 }
 
 #marker {
@@ -112,13 +161,16 @@ h2 {
     transform: translate(-50%, -50%);
 }
 
+/* ========================
+   BUTTONS
+======================== */
+
 button {
     border: none;
     padding: 12px 18px;
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
-    margin: 10px;
     transition: 0.2s;
 }
 
@@ -143,8 +195,20 @@ button:hover {
     color: white;
 }
 
-#result {
-    margin-top: 20px;
-    font-size: 20px;
-    line-height: 1.7;
+/* ========================
+   RESPONSIVE FALLBACK
+======================== */
+
+@media (max-width: 900px) {
+    .game-layout {
+        flex-direction: column;
+    }
+
+    .game-left {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
 }
