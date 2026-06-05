@@ -182,8 +182,8 @@ const rounds = [
     {
         title: "Difficulty: 🌟🌟🌟🌟",
         image: "principalsoffice.jpeg",
-        actualX: 1397,
-        actualY: 2673
+        actualX: 1558,
+        actualY: 2663
     },
 
     {
