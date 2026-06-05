@@ -286,7 +286,7 @@ const rounds = [
 
     {
         title: "Difficulty: 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟",
-        image: "backroomsreal.jpeg",
+        image: "backroomsreal.jpg",
         actualX: 2154,
         actualY: 1724
     },
